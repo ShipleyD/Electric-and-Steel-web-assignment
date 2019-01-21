@@ -1,0 +1,449 @@
+/*------------------------------------------------------------
+
+This is the main styling page for the Electric & Steel website. 
+This site uses Foldy as a bases so that it is responsive for computers, tablets and mobiles.
+
+	Style.css
+
+	Created by:	Dave Rupert
+	Contact:		http://github.com/davatron5000/foldy960
+
+	Copyright 2012
+	License:	  WTFPL + "Not going to maintain this because
+              the rent is too damn high licence."
+
+--------------------------------------------------------------*/
+
+/* Responsive Resets
+
+The following CSS sets the users visable area to the full width of the screen, which will vary depending on the device itself, i.e. larger for computers, smaller for tablets and smaller again for mobiles.
+
+It also sets what happens to the overflow content in the y axis and sets the maximum width for images, audio, video and canvases. 
+-------------------------------------------------------------- */
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+
+html {
+  overflow-y: auto;
+}
+
+img,
+audio,
+video,
+canvas {
+  max-width: 100%;
+}
+
+/* Grid > 6 Column Mobile First
+-------------------------------------------------------------- */
+/* 	The following CSS sets the styling for the main container of the website, its sets its maximum width to 2560px, which is the width of a large monitor.
+	This can be increased in the future if the size of the average monitor increases.
+	It adds the centre style to the website pages by giving it a width of 80% and the left and right margins being set to auto, which makes them evan on both sides.
+	Because the header for this site is not in position relative, there is a top margin of 190px for the rest of the page.
+*/
+.container { 
+  
+	max-width: 2560px;
+	width:80%;
+	margin:190px auto 0 auto;
+	position: relative;
+}
+
+/* 	The clear:both is used here to make sure that even with everything in a relative position, nothing will go to the left or right side of this class. */
+.row {
+  clear: both;
+}
+
+/* 	The following CSS is contained within a media query, this means that it will only take affect if the screen is 600px wide or wider
+	This CSS is pre-defined in foldy and affects the responsiveness of the website, it sets the width for the container and grid and the margin.
+	I have added in the classes fixedheader and fixedfooter so that they respond with the rest of the site.
+*/
+@media screen and (min-width: 600px) {
+  .container {
+    width: 98%;
+  }
+
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-half,
+  .grid-full,
+  .grid-unit {
+    float: left;
+    width:96.969696969697%;
+    margin:0 1.515151515152% 1em;
+  }
+  
+   .fixedheader { width: 100%; }
+  
+  .fixedfooter { width: 100%; }
+
+  .gallery .grid-unit,
+  .grid-half {
+    width:46.969696969697%;
+    margin: 0 1.515151515152% 1em;
+  }
+
+  .grid-flow-opposite{
+    float:right;
+  }
+
+}
+
+/* This media query does much the same as the previous one but takes affect at 800px wide or wider. */
+
+@media screen and (min-width: 800px) {
+	 .container {
+    width: 60%;
+  }
+  .grid-1     { width: 13.636363636364%; }
+  .grid-2     { width: 30.30303030303%; }
+  .grid-3,
+  .grid-half  { width: 46.969696969697%; }
+  .grid-4     { width: 63.636363636364%; }
+  .grid-5     { width: 80.30303030303%; }
+  .grid-6,
+  .grid-full  { width: 96.969696969697%; }
+  
+  .fixedheader { width: 100%; }
+  
+  .fixedfooter { width: 100%; }
+
+  .gallery .grid-unit {
+    width: 30.30303030303%;
+  }
+
+  .content-pad-right {
+    padding-right: 10%; 
+  }
+
+  .content-pad-left {
+    padding-left: 10%;
+  }
+
+}
+
+/* The following CSS applies the background and layout for the main part of the web page.
+-------------------------------------------------------------- */
+body {
+	font: 100%/1.5 sans-serif;
+	background-image : url("images/background1.jpg"); /* This is the background for the whole website. */
+	background-repeat: repeat-y,x; /* This makes the background image repeat both vertically and horizontally. */
+}
+
+section {
+  margin-bottom: 0;
+}
+
+footer {
+  font-size: 0.9em;
+  border-top: 1px solid #1078ba;
+}
+
+
+/* This section controls fonts and font sizes, as well as what happens to links.
+-------------------------------------------------------------- */
+.heading {
+  font-size: 3em;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lucida Calligraphy', cursive;
+}
+
+.sub-heading {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #0066cc;
+}
+
+a:focus,
+a:hover {
+  color: #003399;
+}
+
+/* Header
+-------------------------------------------------------------- */
+
+/* .fixedheader{} this sets the parameters for my header.
+
+It sets where on the page it is going to be located which is the top left of the screen, and spanning the whole width of the screen. 
+
+It also states the background image and tells the image to repeat in the X axis.*/
+
+.fixedheader {
+	position:fixed; 
+	top:0px;	/* This positions the element with this class name in the top left position. */
+	left:0px;
+	max-width:100%;
+	height:auto;
+	background-image : url("images/background1.jpg");
+	background-repeat:x; /* This will make the background image repeat horizontally. */
+	overflow:hidden;
+	padding:0 0 0 0 ;
+	margin: 0 0 0 0;
+	z-index:999;	/* This alters the layer on which the element acts, the higher the number the closer to the front and the lower the number is the further back. */
+}
+
+/* The following element id "HBG" relates to the header image that contains the title, it sets the height and width of the image as well as setting the padding and margin to 0 on all sides. */
+
+#HBG {
+	width: 591px;
+    height: 113px;
+	padding:0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+/* This class relates to the footer and centre aligns all text, as well as setting the position. */
+
+.fixedfooter {
+	text-align:center;
+	bottom:0px;
+	left:0px;
+	width:98%;
+	margin:0 auto;
+	color:#CCC;
+	padding:10px;
+	overflow:hidden;
+}
+
+.copyright{
+	text-align:left;
+	color:#1078ba;
+	font-size:16px;
+}
+
+/* Navigation
+-------------------------------------------------------------- */
+
+/* 	This sets the font, background and position of the navigation bar.
+	The z-index has been used again here so that the navigation bar can be seen above everything else. 
+	The navigation bar is offset from the top of the page by 120px so that it appears underneath the header.*/
+
+.topnav {
+	font-family: 'Lucida Calligraphy', cursive; 
+	background-image : url("images/background1.jpg");
+	background-repeat:x;
+	position: fixed;
+	overflow: hidden;
+	top:120px;
+	left:0px;
+	max-width:100%;
+	width:100%;
+	z-index:999;
+}
+
+/*	The following CSS sets the styling for the links in the navigation bar. */
+/* http://bradsknutson.com/blog/css-button-with-sliding-background-color/ <---- Original code for sweep to top effect on links*/
+.topnav a{
+	float:left;			/* This sets all of the links to float to the left which takes them out of the natural flow of the page.*/
+	display:block;		/* This means that the whole box is a link and not just the text. */
+	color:#1078ba;		/* This sets the text colour of the link */
+	padding:6px 35px;	/* This sets the amount of padding the links have. */
+	text-decoration:none;	/* This makes sure that the text has no overline, underline or a line-through. */
+	font-size:20px;		/* Sets the font sizes */
+	-webkit-transition: all ease 0.8s;	
+	-moz-transition: all ease 0.8s;		/* These three lines create the transition between the hover colouring and the normal colouring of the links. */
+	transition: all ease 0.8s;
+}
+
+/* Link colours on hover */
+.topnav a:hover {
+	box-shadow: inset 0 100px 0 0 #1078ba;
+	color:#f2f2f2;
+}
+/*Hides the link to open and close navigation on small screens*/
+.topnav .icon {
+	display:none;
+}
+
+/*At 800 pixels wide this media query will hide all of the links link and show the link that opens and closes the navigation on smaller screens*/
+
+@media screen and (max-width:800px){
+	.topnav a {
+		display:none;
+	}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+}
+
+/*This media query gives the parameter changes after the menu button is clicked*/
+@media screen and (max-width:800px){
+	.topnav.responsive {
+		position:fixed;
+	}
+	.topnav.responsive a.icon {
+		position:absolute;
+		right:0;
+		top:0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
+
+/* This hides the images of the slideshow on the home page. */
+.mySlides {
+	 display:none; 
+}
+
+#mySlides {
+	background:none;
+	padding:0 0 0 0;
+}
+
+/* 	The following sets the styles for the tables on the FAQ page of the site.
+	They set the amount of padding that each cell has, centres the text and adds the borders.*/
+
+
+table.openingtimes th, .openingtimes td {
+    padding: 0 5px;		/* This line means that it has padding on the right and left but no padding on the top and bottom. */
+    text-align: center;
+}
+table.openingtimes, .openingtimes th, .openingtimes td {
+	border-bottom: 1px solid #77c1ef;		/* This only adds a border to the bottom of each row. */
+	border-collapse: collapse;				/* This stops the gaps between the borders of the cells. */
+	text-align: center;
+}
+
+table.openingtimes {
+	width:100%;		/* This makes the tables width expand to fill its container. */
+}
+
+table.prices, .prices th, .prices td {
+	border: 1px solid #77c1ef;		/* This border is on all sides of the cells and is a solid line with a width of 1px and the colour #77c1ef which is the blue used throughout this site. */
+	padding: 15px 10px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table.prices {
+	width:100%;
+}
+
+/* 	The following section of CSS controlls the styling for the Facebook plugin on the home page.
+	This section also contains the media queries needed to make the plugin responsive, as it is not responsive in itself.*/
+
+#fb {
+	height:499px;
+	padding: 0 0 0 0;
+	background:none;
+	
+}
+
+#fb-big {
+	display: none;
+}
+
+/* These media queries hide one copy of the Facebook plugin and then displays the one that was previously hiddden.
+	On larger screens the Facebook plugin will be displayed with an image next to it, whilst on smaller screens they will be displayed one above another. */
+
+@media screen and (max-width:1175px){
+	#fb-fix {
+		display:none;
+	}
+	
+	#fb-big {
+		display:initial;
+	}
+	
+}
+
+@media screen and (max-width:800px){
+	#fb {
+		display:none;
+	}
+}
+
+/* 	This sets the styling for the canvas at the bottom of every page.
+	It overrides the existing background and sets it not to use one as well as getting rid off the padding.*/
+
+#canvas-case {
+	background:none;
+	padding:0 0 0 0;
+	width:100%;
+}
+
+/* The CSS for this id creates a text shadow that acts as a border to the title text for the competition part of the home page. */
+
+#shadow {
+	text-shadow: -0.75px 0 black, 0 1px black, 0.75px 0 black, 0 -0.75px black;
+}
+
+#competition {
+	background-color:white;
+	border: 10px solid red;
+	padding: 15px 10px;
+	border-collapse: collapse;
+}
+
+/* The following id contains the google map plugin and this CSS sets the width and height of the map. */
+	
+#map
+	{
+		width: 100%;
+		height: 400px;
+		background:none;
+	}
+
+/* 	The next section of css controls the styling for the ordered list in the competition section.
+	It adds the hebrew styling of numbers. 
+	It also sets the padding and margin for the list members.*/	
+	
+ol.comp-list {
+	list-style-type: hebrew ;
+	list-style-position: inside;
+}
+
+.comp-list li {
+	padding:10px;
+	margin:10px;
+}
+
+/* The following CSS comes from Foldy originally but has been edited to fit the styling of this site.
+-------------------------------------------------------------- */
+
+.show-grid div[class*='grid-'] { 	/* This line means that the following styling will only affect divs containing "grid-" in its class name, and then only if it is within the "show-grid" class itself. */
+  background-color:#333;	
+  color:#77c1ef;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding: 1em 1em;
+  margin-bottom: 1em;
+  text-align: center;
+	
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom: none;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}

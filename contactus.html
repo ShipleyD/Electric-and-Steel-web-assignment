@@ -1,0 +1,106 @@
+<!DOCTYPE html> 	
+<!-- Contact Us -->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Electric & Steel</title> <!-- This is the title of the page, it displays in the tab of the browser -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- The meta viewport element tells the browser how to control the pages dimensions and scaling.
+																				 The "width=device-width" part sets the width of the page to follow the screen-width of the device.
+																				 The "initial-scale=1.0" sets the initial zoom for the page when loaded.-->
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- This creates the icon that shows in the browser tab next to the title, this only works with Google Chrome -->
+	<!-- stylesheets -- The following two lines link this html page with the CSS pages that effect it, they control the style of the page.-->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+	<!-- JavaScript -- The following line links this html page to the Javascript page which contains the functions needed-->
+	<script type="text/javascript" src="javascript.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script> <!-- This links to a Google API javascript page and is needed to make the embedded google maps component work that is at the bottom of this page. --> 	
+</head>
+
+<body>
+	<section id="content">
+		<div class="container">
+			<section id="introp" class="cf">
+				<div class="fixedheader" id="fixedHeader"> <!-- This div contains the header, the id and class styles can be found in the css -->
+					<h1 class="heading"><center><img id="HBG" src="images/BG.png" width="959" height="333"></center></h1> <!-- This is the image of for the top of the website and is the same on everypage, it has in-line styling for the width and height. -->
+				</div>
+				
+				<!-- Nav Bar -- The following div contains the base of the navigation bar it sets the links to each of the pages as well as containing the text.
+						The last link in this div "<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>" states that when clicked the javascript function "hamburgerIcon()" will be run when the link is clicked. The text "&#9776;" displays the hamburger menu icon.
+						The id for this is important as it is used within the javascript functions.-->
+
+				<div class="topnav" id="myTopnav">
+					<a href="index.html">Home</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="tattoo.html">Tattoos</a>
+					<a href="contactus.html">Contact Us</a>
+					<a href="faq.html">FAQ</a>
+					<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>
+					</div>
+				
+				<!-- Nav Bar End -->
+				<div class="cf show-grid">
+				
+					<div class="row">
+						<div class="grid-6" id="mySlides">
+							<img src="images/BW6.jpg"> <!-- This is the top image for the page, the style for this image can be found in the style.css file under #mySlides -->
+						</div>					
+				 	</div>		
+				
+					
+					
+					<div class="row">
+						<div class="grid-half" id="mySlides"><img src="images/shop5.jpg"></div>
+						<div class="grid-half">
+
+							<p>If you have any questions click on the FAQs tab at the top of the page. If you need more help no problem, you can call or email us using the details below. If you're looking to book a piercing appointment it's best to give us a call or pop in.</p>
+							
+							<p><strong>PLEASE NOTE TATTOO APPOINTMENTS NEED TO BE BOOKED IN THE SHOP AS A DEPOSIT NEEDS TO BE TAKEN.</strong></p>
+							
+							<h2>Get in touch</h2>
+							<p><address>Electric & Steel<br>10 The Strand<br>Barnstaple<br>EX31 1EU<br><br>info@ElectricandSteel.co.uk<br><br>01271 344311</address></p>
+						
+						</div>
+					</div>
+					<div class="row">
+						<div class="grid-6">
+							
+							<h2>Find Us Here</h2>
+							
+							<p>Our bright and welcoming studio sits just a road away from Barnstaple High Street.</p> 
+							
+							<p>We have great parking options around us, and are also a short walk from the bus and train station.</p>
+						
+						</div>
+				 	</div>					
+					
+					<!-- The following html positions a Google maps plugin at the bottom of the page, all of the details for the map are contained within the javascript.js file.
+					The map loads when the initMap() function is called, the map will have full usability -->
+					
+					<div class="row">
+						<div class="grid-6" id="map">
+							<div id="map">
+								<script>initMap()</script> 
+							</div>
+						</div>
+				 	</div>
+					
+					<!-- The next bit of html creates the box with moving dots at the bottom of every page, it does this by using the canvas tag which enables drawing by using javascript functions.-->
+					
+					<div class="row">
+	 			    <div class="grid-6" id="canvas-case"><canvas id="canvas" style="background-image:url(images/background1.jpg)"></canvas></div>
+				 	</div>
+					<script>snow ()</script> <!-- This calls the function to create the random particles.-->
+				</div>
+			</section>
+		</div>
+	</section>
+	<!--This footer will be on every page and contains the address and contact details.-->
+	<footer class="fixedfooter">
+		<address>Electric & Steel<br>10 The Strand<br>Barnstaple<br>EX31 1EU<br>info@ElectricandSteel.co.uk<br>01271 344311</address>
+		<br>
+		<div class="copyright">Electric & Steel, Created by David Shipley &copy; 2017</div>
+	</footer>
+</body>
+</html>

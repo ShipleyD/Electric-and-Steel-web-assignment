@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!-- Tattoo Gallery -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<title>Electric & Steel</title> <!-- This is the title of the page, it displays in the tab of the browser -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- The meta viewport element tells the browser how to control the pages dimensions and scaling.
+																				 The "width=device-width" part sets the width of the page to follow the screen-width of the device.
+																				 The "initial-scale=1.0" sets the initial zoom for the page when loaded.-->
+																				 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- This creates the icon that shows in the browser tab next to the title, this only works with Google Chrome -->
+		
+	<!-- stylesheets -- The following two lines link this html page with the CSS pages that effect it, they control the style of the page.-->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="tattoosstyle.css" type="text/css" /> <!-- This page of CSS is specific for this html page. -->
+
+	<!-- JavaScript -- The following line links this html page to the Javascript page which contains the functions needed-->
+	<script type="text/javascript" src="javascript.js"></script>
+	
+</head>
+
+<body>
+	<section id="content">	
+		<div class="container"><!-- This div will be used to help make the page responsive. -->
+			<section id="introp" class="cf">
+				<div class="fixedheader" id="fixedHeader"> <!-- This div contains the header, the id and class styles can be found in the css -->
+					<h1 class="heading"><center><img id="HBG" src="images/BG.png" width="959" height="333"></center></h1> <!-- This is the image of for the top of the website and is the same on everypage, it has in-line styling for the width and height. -->
+				</div>
+				
+				<!-- Nav Bar -- The following div contains the base of the navigation bar it sets the links to each of the pages as well as containing the text.
+						The last link in this div "<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>" states that when clicked the javascript function "hamburgerIcon()" will be run when the link is clicked. The text "&#9776;" displays the hamburger menu icon.
+						The id for this is important as it is used within the javascript functions.-->
+
+				<div class="topnav" id="myTopnav">
+					<a href="index.html">Home</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="tattoo.html">Tattoos</a>
+					<a href="contactus.html">Contact Us</a>
+					<a href="faq.html">FAQ</a>
+					<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>
+					</div>
+				
+				<!-- Nav Bar End -->
+				
+				<!-- Gallery -->
+								
+				<div class="cf show-grid">	<!-- This conatins everything on the page that is using the "Foldy960" grid. -->
+				<div class="row">			<!-- This div stops floating elements going to the left or right of this div. -->
+					<div class="grid-6">	<!-- The "grid-6" class for divs means that it will span the full width of the container class.-->
+					<h1>Click on a tattoo for a closer look</h1> <!-- The h1 tag changes the size and font of text. -->
+					</div>
+				</div>
+				 	<div class="row">
+	 			    <div class="grid-6" id="tattoosstyle"> <!-- This div contains all of the information for the Tattoo gallery -->
+						<div class="row">
+						  <div class="column" id="tattoosstyle">	<!-- The column class uses CSS to set the layout of the gallery, whilst the id tattoostyle removes the margin 	and background and sets the padding.
+						The next line adds an image to the gallery, states its width and when the image is clicked on the javascript functions "openModal()" and "currentSlide()"is run.
+						This is then repeated for every image thats included in the gallery.-->
+							<img src="images/TG1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+						  	<img src="images/TG6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG11.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG12.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG13.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG14.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG15.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+						  </div>
+							<div class="column" id="tattoosstyle">
+							<img src="images/TG16.jpg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG17.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG18.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG19.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG20.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG21.jpg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG22.jpg" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG23.jpg" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+						  </div>
+						  <div class="column" id="tattoosstyle">
+							<img src="images/TG24.jpg" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
+						  </div>
+						</div>
+
+						<!-- This div starts the second part of the gallery which is used after one of the images has been clicked on.
+							This will have a large slideshow styled photo roller at the top with the remaining images underneath.-->
+						<div id="myModal" class="modal"> 
+						  <span class="close cursor" onclick="closeModal()">&times;</span> <!-- This line creates the cross used to close the gallery page after an image has been clicked on. -->
+						  <div class="modal-content"> <!-- This div contains all of the images for the large slideshow style photo at the top of the gallery after an image has been clicked on. It also includes the slide number making it possible to know how many you have left to look through. -->
+
+							<div class="tattooSlides">
+							  <div class="numbertext">1 / 24</div> <!-- This number will appear in the top left of the slideshow image. -->
+							  <img src="images/TG1.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">2 / 24</div>
+							  <img src="images/TG2.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">3 / 24</div>
+							  <img src="images/TG3.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">4 / 24</div>
+							  <img src="images/TG4.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">5 / 24</div>
+							  <img src="images/TG5.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">6 / 24</div>
+							  <img src="images/TG6.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">7 / 24</div>
+							  <img src="images/TG7.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">8 / 24</div>
+							  <img src="images/TG8.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">9 / 24</div>
+							  <img src="images/TG9.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">10 / 24</div>
+							  <img src="images/TG10.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">11 / 24</div>
+							  <img src="images/TG11.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">12 / 24</div>
+							  <img src="images/TG12.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">13 / 24</div>
+							  <img src="images/TG13.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">14 / 24</div>
+							  <img src="images/TG14.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">15 / 24</div>
+							  <img src="images/TG15.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">16 / 24</div>
+							  <img src="images/TG16.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">17 / 24</div>
+							  <img src="images/TG17.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">18 / 24</div>
+							  <img src="images/TG18.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">19 / 24</div>
+							  <img src="images/TG19.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">20 / 24</div>
+							  <img src="images/TG20.jpg" style="width:100%">
+							</div>
+							
+							<div class="tattooSlides">
+							  <div class="numbertext">21 / 24</div>
+							  <img src="images/TG21.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">22 / 24</div>
+							  <img src="images/TG22.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">23 / 24</div>
+							  <img src="images/TG23.jpg" style="width:100%">
+							</div>
+
+							<div class="tattooSlides">
+							  <div class="numbertext">24 / 24</div>
+							  <img src="images/TG24.jpg" style="width:100%">
+							</div>
+						</div>
+						
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- This line creates the previous button on the slideshow and when clciked it runs the javascript function "plusSlides()" -->
+							<a class="next" onclick="plusSlides(1)">&#10095;</a> <!-- This line creates the next button on the slideshow and when clciked it runs the javascript function "plusSlides()" -->
+
+							<!-- The following lines create the images underneath the slideshow.
+								When these images are clicked on they replace the current image in the slideshow, by running the javascript function "currentSlide()".
+								These images are styled with in-line styling of width="width:100%" which makes them fill the whole width of their container.-->
+							<div class="column">
+							  <img class="demo cursor" src="images/TG1.jpg" style="width:100%" onclick="currentSlide(1)" >
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG2.jpg" style="width:100%" onclick="currentSlide(2)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG3.jpg" style="width:100%" onclick="currentSlide(3)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG4.jpg" style="width:100%" onclick="currentSlide(4)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG5.jpg" style="width:100%" onclick="currentSlide(5)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG6.jpg" style="width:100%" onclick="currentSlide(6)" >
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG7.jpg" style="width:100%" onclick="currentSlide(7)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG8.jpg" style="width:100%" onclick="currentSlide(8)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG9.jpg" style="width:100%" onclick="currentSlide(9)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG10.jpg" style="width:100%" onclick="currentSlide(10)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG11.jpg" style="width:100%" onclick="currentSlide(11)" >
+							</div>                                   
+							<div class="column">                     
+							  <img class="demo cursor" src="images/TG12.jpg" style="width:100%" onclick="currentSlide(12)">
+							</div>                                                                                   
+							<div class="column">
+							  <img class="demo cursor" src="images/TG13.jpg" style="width:100%" onclick="currentSlide(13)">
+							</div>
+							<div class="column">
+							<img class="demo cursor" src="images/TG14.jpg" style="width:100%" onclick="currentSlide(14)">
+							</div>
+							<div class="column">
+							<img class="demo cursor" src="images/TG15.jpg" style="width:100%" onclick="currentSlide(15)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG16.jpg" style="width:100%" onclick="currentSlide(16)" >
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG17.jpg" style="width:100%" onclick="currentSlide(17)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG18.jpg" style="width:100%" onclick="currentSlide(18)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG19.jpg" style="width:100%" onclick="currentSlide(19)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG20.jpg" style="width:100%" onclick="currentSlide(20)">
+							</div>
+							<div class="column">
+							  <img class="demo cursor" src="images/TG21.jpg" style="width:100%" onclick="currentSlide(21)" >
+							</div>                                   
+							<div class="column">                     
+							  <img class="demo cursor" src="images/TG22.jpg" style="width:100%" onclick="currentSlide(22)">
+							</div>                                                                                   
+							<div class="column">
+							  <img class="demo cursor" src="images/TG23.jpg" style="width:100%" onclick="currentSlide(23)">
+							</div>
+							<div class="column">
+							<img class="demo cursor" src="images/TG24.jpg" style="width:100%" onclick="currentSlide(24)">
+							</div>
+						  </div>
+						</div>
+						
+						<!-- The next bit of html creates the box with moving dots at the bottom of every page, it does this by using the canvas tag which enables drawing by using javascript functions.-->
+						<div class="row">
+							<div class="grid-6" id="canvas-case"><canvas id="canvas" style="background-image:url(images/background1.jpg)"></canvas></div>
+						</div>
+						<script>snow ()</script> <!-- This calls the function to create the random particles.-->
+					
+					
+					
+					</div>
+				 	</div>
+				</div>
+			</section>
+		</div>
+	</section>
+	<footer class="fixedfooter">
+		<address>Electric & Steel<br>10 The Strand<br>Barnstaple<br>EX31 1EU<br>info@ElectricandSteel.co.uk<br>01271 344311</address>
+		<br>
+		<div class="copyright">Electric & Steel, Created by David Shipley &copy; 2017</div>
+	</footer> <!--This footer will be on every page and contains the address and contact details.-->
+</body>
+</html>

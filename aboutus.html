@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- About Us -->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Electric & Steel</title> <!-- This is the title of the page, it displays in the tab of the browser -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- The meta viewport element tells the browser how to control the pages dimensions and scaling.
+																				 The "width=device-width" part sets the width of the page to follow the screen-width of the device.
+																				 The "initial-scale=1.0" sets the initial zoom for the page when loaded.-->
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- This creates the icon that shows in the browser tab next to the title, this only works with Google Chrome -->
+	<!-- stylesheets -- The following two lines link this html page with the CSS pages that effect it, they control the style of the page.-->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+	<!-- JavaScript -- The following line links this html page to the Javascript page which contains the functions needed-->
+	<script type="text/javascript" src="javascript.js"></script>
+	
+</head>
+
+<body>
+	<section id="content">	
+		<div class="container">
+			<section id="introp" class="cf">
+				<div class="fixedheader" id="fixedHeader"> <!-- This div contains the header, the id and class styles can be found in the css -->
+					<h1 class="heading"><center><img id="HBG" src="images/BG.png" width="959" height="333"></center></h1> <!-- This is the image of for the top of the website and is the same on everypage, it has in-line styling for the width and height. -->
+				</div>
+				
+				<!-- Nav Bar -- The following div contains the base of the navigation bar it sets the links to each of the pages as well as containing the text.
+						The last link in this div "<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>" states that when clicked the javascript function "hamburgerIcon()" will be run when the link is clicked. The text "&#9776;" displays the hamburger menu icon.
+						The id for this is important as it is used within the javascript functions.-->
+
+				<div class="topnav" id="myTopnav">
+					<a href="index.html">Home</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="tattoo.html">Tattoos</a>
+					<a href="contactus.html">Contact Us</a>
+					<a href="faq.html">FAQ</a>
+					<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>
+					</div>
+				
+				<!-- Nav Bar End -->
+				
+				
+				<div class="cf show-grid">
+				
+					<div class="row">
+						<div class="grid-6" id="mySlides">
+							<img src="images/BW7.jpg">	<!-- This is the top image for the page, the style for this image can be found in the style.css file under #mySlides -->
+						</div>					
+				 	</div>
+					
+					<div class="row">
+						<div class="grid-3"> <!-- This div splits the row in to two halfs. The following text will be in the first half of the row -->
+							<h1>A little bit about the parlour...</h1>
+							<p>Our brand new custom tattoo studio in Barnstaple has been fitted with all the latest state of the art tattooing equipment and facilities! We also pride ourselves in our impeccable standards of cleanliness and hygiene.</p>
+							
+							<p>Electric & Steel formed in 2009, starting out as Dave and Pinchy in a small parlour in the centre of Barnstaple. Since then the team has grown, the latest of which was the move to the new store in early 2017 and the merger with local Riverside parlour, the services on offer have expanded as well, now offering gents hair and beard cuts.</p>
+							
+							<p>Meet our fantastic team of tattoo artists below...</p>
+							
+						</div>
+				    
+						<div class="grid-3" id="mySlides"><!-- This will sit on the other half of the row. -->						
+							<img src="images/shop4.jpg">							
+						</div>
+				 	</div>
+					
+					<!-- The following html introduces the team, it is layed out so that it has photos on alternating sides of the page. -->
+					<!-- In the following paragraphs	 the tags "blockquote" and "cite" are used, these indent the quote as well as setting it to italics.-->
+					
+				 	<div class="row">
+						<div class="grid-3" id="mySlides"><img src="images/Dave.jpg"></div>
+						<div class="grid-3">
+							<h1>A little bit about Dave...</h1>
+							<p><blockquote><cite>“I think my style of tattooing could be called “Illustrative Traditional” which seems to suit. In application at least. I use bold lines and black shading which is the basis for all traditional tattooing. I’m inspired more and more by the people themselves rather than the work they produce. I take inspiration from anything that works. Nothing specific. Music, art, film – it’s all one big soup.”</cite></blockquote></p>
+							<p>Dave has been tattooing since 2007, working in a few shops in Devon before opening Electric & Steel alongside pinchy in 2009.</p>
+						</div>
+				 	</div>
+					
+				 	<div class="row">
+						<div class="grid-3">
+							<h1>A little bit about Dan...</h1>
+							<p><blockquote><cite>“I’d say my tattoo style is contemporary classic, and I’ve been tattooing almost 4 years now. I started tattooing friends off the back of being a graffiti writer and then was lucky enough to be offered a job at Electric & Steel.”</cite></blockquote></p>
+							<p>Dan has been tattooing since 2013 and joined Electric & Steel in 2015.</p>
+						</div>
+						<div class="grid-3" id="mySlides"><img src="images/Dan2.jpg"></div>
+				 	</div>
+					
+				 	<div class="row">
+						<div class="grid-3" id="mySlides"><img src="images/Matt2.jpg"></div>
+						<div class="grid-3">
+							<h1>A little bit about Matt...</h1>
+							<p><blockquote><cite>“I guess my style is half way between traditional and neo-traditional. I love tattooing in colour or black & grey, I think it lends itself well to either. My designs have a decent amount of black in and good contrast; ageing well with the wearer. I find great personal satisfaction in starting and finishing hand sized, one shot tattoos. This year I’m really going to push myself towards bigger projects, painting more and adapting my style to a yet unknown degree!”</cite></blockquote></p>
+							<p>Matt has been tattooing since 2011, working in a few shops in Devon before joining Electric & Steel in 2017.</p>
+						</div>
+				 	</div>
+					
+					<!-- The next bit of html creates the box with moving dots at the bottom of every page, it does this by using the canvas tag which enables drawing by using javascript functions.-->
+					
+					<div class="row">
+	 			    <div class="grid-6" id="canvas-case"><canvas id="canvas" style="background-image:url(images/background1.jpg)"></canvas></div>
+				 	</div>
+					<script>snow ()</script> <!-- This calls the function to create the random particles.-->
+				</div>
+			</section>
+		</div>
+	</section>
+	<!--This footer will be on every page and contains the address and contact details.-->
+	<footer class="fixedfooter">
+		<address>Electric & Steel<br>10 The Strand<br>Barnstaple<br>EX31 1EU<br>info@ElectricandSteel.co.uk<br>01271 344311</address>
+		<br>
+		<div class="copyright">Electric & Steel, Created by David Shipley &copy; 2017</div>
+	</footer>
+</body>
+</html>

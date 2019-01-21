@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- FAQ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Electric & Steel</title> <!-- This is the title of the page, it displays in the tab of the browser -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- The meta viewport element tells the browser how to control the pages dimensions and scaling.
+																				 The "width=device-width" part sets the width of the page to follow the screen-width of the device.
+																				 The "initial-scale=1.0" sets the initial zoom for the page when loaded.-->
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- This creates the icon that shows in the browser tab next to the title, this only works with Google Chrome -->
+	<!-- stylesheets -- The following two lines link this html page with the CSS pages that effect it, they control the style of the page.-->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+	<!-- JavaScript -- The following line links this html page to the Javascript page which contains the functions needed-->
+	<script type="text/javascript" src="javascript.js"></script>
+	
+</head>
+
+<body>
+	<section id="content">
+		<div class="container">
+			<section id="introp" class="cf">
+				<div class="fixedheader" id="fixedHeader"> <!-- This div contains the header, the id and class styles can be found in the css -->
+					<h1 class="heading"><center><img id="HBG" src="images/BG.png" width="959" height="333"></center></h1> <!-- This is the image of for the top of the website and is the same on everypage, it has in-line styling for the width and height. -->
+				</div>
+				
+				<!-- Nav Bar -- The following div contains the base of the navigation bar it sets the links to each of the pages as well as containing the text.
+						The last link in this div "<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>" states that when clicked the javascript function "hamburgerIcon()" will be run when the link is clicked. The text "&#9776;" displays the hamburger menu icon.
+						The id for this is important as it is used within the javascript functions.-->
+
+				<div class="topnav" id="myTopnav">				
+					<a href="index.html">Home</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="tattoo.html">Tattoos</a>
+					<a href="contactus.html">Contact Us</a>
+					<a href="faq.html">FAQ</a>
+					<a href="javascript:void(0);" class="icon" onclick="hamburgerIcon()">&#9776;</a>
+				</div>
+				
+				<!-- Nav Bar End -->
+				
+				
+				<div class="cf show-grid">				
+					<div class="row"> <!-- This row contains three grid-2 classes, on a large screen these will display all in the same row, on smaller screens they will stack vertically. -->
+						<div class="grid-2" id="mySlides"><img src="images/shopfront.jpg"> <!-- This will be the image on the left. -->
+						</div>
+						
+						<!-- The following html creates a table showing the opening times of the parlour, with two columns and seven rows.
+							For the days of the week the "strong" element has been used to make them more distinct.-->
+						
+						<div class="grid-2" id="FAQ-times">
+							<h1><ins>Opening Times</ins></h1> <!-- The "ins" element is used here to underline the title. -->
+
+							<table align="center" class="openingtimes">
+								<tr>
+									<td><strong>Monday</strong></td>
+									<td style="color:red">Closed</td> <!-- In-line styling used to colour the text of this cell red. -->
+								</tr>
+								<tr>
+									<td><strong>Tuesday</strong></td>
+									<td>10:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td><strong>Wednesday</strong></td>
+									<td>10:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td><strong>Thursday</strong></td>
+									<td>10:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td><strong>Friday</strong></td>
+									<td>10:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td><strong>Saturday</strong></td>
+									<td>10:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td><strong>Sunday</strong></td>
+									<td style="color:red">Closed</td> <!-- In-line styling used to colour the text of this cell red. -->
+								</tr>
+								
+							</table>
+						</div>
+						<div class="grid-2" id="mySlides"><img src="images/shop5.jpg"></div> <!-- This will be the image on the right. -->
+						</div>
+					
+					<!-- The following html will create a second table showing the prices for tattoos by different artists.  -->
+						
+					<div class="row">
+						<div class="grid-6" id="prices1">
+							<h1><ins>A Rough Guide To Our Pricing</ins></h1>
+							<table align="center" class="prices">
+								<tr>
+									<th rowspan="2">Time</th>
+									<th colspan="6">Artist</th>
+								</tr>
+								<tr>
+									<th colspan="2">Matt</th>
+									<th colspan="2">Dave</th>
+									<th colspan="2">Dan</th>
+								</tr>
+								<tr>
+									<td>Per Hour</td>
+									<td colspan="2">£60.00</td>
+									<td colspan="2">£90.00</td>
+									<td colspan="2">£40.00</td>
+								</tr>
+								<tr>
+									<td>Four Hours</td>
+									<td colspan="2">£200.00</td>
+									<td colspan="2">£300.00</td>
+									<td colspan="2">£100.00</td>
+								</tr>
+								<tr>
+									<td>Whole Day</td>
+									<td colspan="2">£350.00</td>
+									<td colspan="2">£550.00</td>
+									<td colspan="2">£250.00</td>
+								</tr>
+								<tr>
+									<td>Touch-Up</td>
+									<td colspan="2">£20.00</td>
+									<td colspan="2">£20.00</td>
+									<td colspan="2">£20.00</td>
+								</tr>
+								<tr>
+									<td>Deposits</td>
+									<td colspan="2">10%</td>
+									<td colspan="2">10%</td>
+									<td colspan="2">10%</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="grid-6" id="mySlides"><img src="images/sketch1.jpg"></div> <!-- This is a full width image used to space out the page. -->
+					</div>
+				
+					<!-- The following html contains the frequently asked questions for the parlour.
+						Each section goes across the full width of the container. -->
+				
+					<div class="row">
+						<div class="grid-6">
+							<h2>I would like to be tattooed at Electric & Steel, what’s the booking process and how does it work?</h2>
+							
+							<p>Usually we ask customers to initially come and see us in person. We have reception staff available all day who can help you refine your ideas and aid your decision and to which tattoo artist is best for you and your project. You do not need to book a slot to come and speak with our reception staff. After seeing the reception staff, we can then book you in for your tattoo, or book a consultation with your chosen artist, if you’d like one. Sometimes consultations are necessary to take measurements or to trace the area you’d like to be tattooed. If you live outside of the area, you can email us your ideas and we can go from there. All of this process is free but we will require a deposit to hold any time you book.</p>
+							
+							<h2>How much is the deposit, and what is it necessary for?</h2>
+							
+							<p>Your deposit will vary depending on the estimated final cost of your tattoo. Deposits are necessary as cancelations can result in a lot of wasted time. It also helps spread the cost of your final tattoo. Bookings with deposits can be moved, but we require 48 hours notice, otherwise your deposit will be lost. This includes being late for your appointment.</p>
+						</div>
+					</div>				
+				
+					<div class="row">
+						<div class="grid-6" id="mySlides"><img src="images/sketch2.jpg"></div>
+					</div>
+				
+					<div class="row">
+						<div class="grid-6">
+							<h2>Could I get a quote on this tattoo?</h2>
+							
+							<p>Yes, however we do not give quotes over the phone or over email. Please come into the studio to discuss your idea, and we can give you a rough estimate.</p>
+							
+							<h2>How long is your waiting list?</h2>
+							
+							<p>The booking processes vary from artist to artist. Only a couple of artists operate on a waiting list system, others we can book you in straight away. Please contact us in regards to specific artists.</p>
+							
+							<h2>Most of the tattoos featured on your website are quite large, but what I want is quite small/simple, is this something I could get tattooed at your shop?</h2>
+							
+							<p>We are more than happy to do smaller pieces. The portfolios are intended to give an indication of each artists style, not just the work they ‘only’ do.</p>
+							
+							<h2>I have a design in mind, would one of your artists be able to draw something up for me?</h2>
+							
+							<p>Yes! Electric & Steel is a custom tattoo shop. Most customers bring in their rough ideas.</p>
+							
+							<h2>I have something very specific that I would like tattooed, is this possible?</h2>
+							
+							<p>Mostly yes- however, often a design needs a little tweaking in order to make it a tattoo that will age well with time.</p>
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="grid-6" id="mySlides"><img src="images/sketch4.jpg"></div>
+					</div>
+				
+					<div class="row">
+						<div class="grid-6">
+							<h2>Can I see my design before the booking?</h2>
+							
+							<p>Yes, we can show you a design the day before the actual tattoo, but this needs to be booked in advance.</p>
+							
+							<h2>I would like to get a cover-up over an existing tattoo, how do I go about this?</h2>
+							
+							<p>Please come into the studio. Cover-up work needs a lot of special attention and consideration, and we’d need to see the existing tattoo in person. We can then advise you from there.</p>
+							
+							<h2>I don’t live in the UK, but I plan on getting tattooed whist in Devon, is this possible?</h2>
+							
+							<p>We can arrange appointments remotely, but still require a deposit to hold your space. We have several ways we can take this, so please contact the shop with your dates and your ideas, and we’ll go from there.</p>
+							
+							<h2>Can I bring a friend with me when I get tattooed?</h2>
+							
+							<p>Yes, but they cannot come into the tattooing area. They will have to wait for you at reception.</p>
+							
+							<h2>Do you do piercing?</h2>
+							
+							<p>Yes we offer a full range of piercings.</p>
+							
+							<h2>Can I get a ‘white ink’ tattoo at your studio?</h2>
+							
+							<p>White ink is notorious for its questionable longevity. As a shop, we like to discourage ‘white ink only’ tattoos.</p>
+						</div>
+					</div>
+					
+					<!-- The next bit of html creates the box with moving dots at the bottom of every page, it does this by using the canvas tag which enables drawing by using javascript functions.-->
+					
+					<div class="row">
+	 			    <div class="grid-6" id="canvas-case"><canvas id="canvas" style="background-image:url(images/background1.jpg)"></canvas></div>
+				 	</div>
+					<script>snow ()</script> <!-- This calls the function to create the random particles.-->
+				</div>
+			</section>
+		</div>
+	</section>
+	<!--This footer will be on every page and contains the address and contact details.-->
+	<footer class="fixedfooter">
+		<address>Electric & Steel<br>10 The Strand<br>Barnstaple<br>EX31 1EU<br>info@ElectricandSteel.co.uk<br>01271 344311</address>
+		<br>
+		<div class="copyright">Electric & Steel, Created by David Shipley &copy; 2017</div>
+	</footer>
+</body>
+</html>
